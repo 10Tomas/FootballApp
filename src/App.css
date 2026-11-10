@@ -1,0 +1,316 @@
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+/* ---------- Today's matches ---------- */
+
+.league-group {
+  margin-bottom: 24px;
+}
+
+.league-group h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.match-card {
+  display: grid;
+  grid-template-columns: 56px 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  font: inherit;
+  color: var(--text-h);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s;
+}
+
+.match-card:hover {
+  border-color: var(--accent);
+}
+
+.team-away {
+  text-align: right;
+}
+
+.score {
+  font-weight: 700;
+  min-width: 48px;
+  text-align: center;
+}
+
+.status {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.status-live {
+  color: var(--live);
+  font-weight: 700;
+}
+
+/* ---------- Match page ---------- */
+
+.back-button {
+  font: inherit;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.match-header {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.match-header-league {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.match-header-teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.match-header-score {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.big-score {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text-h);
+}
+
+.team-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.badge {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin: 16px 0;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  font: inherit;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+.tab-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.empty {
+  margin: 0;
+  font-style: italic;
+}
+
+/* ---------- Match details ---------- */
+
+.info-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 16px;
+  margin: 0 0 20px;
+}
+
+.info-list dt {
+  font-weight: 600;
+}
+
+.info-list dd {
+  margin: 0;
+  color: var(--text-h);
+}
+
+.events {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h);
+}
+
+.event-away {
+  flex-direction: row-reverse;
+}
+
+.event-minute {
+  font-weight: 700;
+  min-width: 32px;
+}
+
+/* ---------- Tables (league + odds) ---------- */
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.league-table,
+.odds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.league-table th,
+.league-table td,
+.odds-table th,
+.odds-table td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.col-team {
+  text-align: left !important;
+}
+
+.league-table td,
+.odds-table td {
+  color: var(--text-h);
+}
+
+.league-table tr.highlight {
+  background: var(--accent-bg);
+}
+
+.best-odds {
+  font-weight: 700;
+  color: var(--accent) !important;
+}
+
+/* ---------- Statistics ---------- */
+
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stat-values {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  color: var(--text-h);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-weight: 400;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.stat-bar {
+  display: flex;
+  gap: 4px;
+  height: 6px;
+}
+
+.stat-bar-home {
+  background: var(--home);
+  border-radius: 3px;
+}
+
+.stat-bar-away {
+  background: var(--away);
+  border-radius: 3px;
+}
+
+/* ---------- Team news + lineups ---------- */
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 560px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.news-list,
+.lineup {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-h);
+}
+
+.news-list li,
+.lineup li {
+  padding: 4px 0;
+}
+
+.formation {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text);
+}
